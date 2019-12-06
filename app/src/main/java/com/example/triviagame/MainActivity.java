@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String mAnswer;
     private int mScore = 0;
     private int mQuestionNumber = 0;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
