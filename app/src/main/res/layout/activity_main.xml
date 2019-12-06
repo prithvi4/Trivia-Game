@@ -1,89 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#970C0B0B">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/which_thing_is_alive"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/question"  />
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:layout_marginBottom="60dp"
-        android:text="@string/question"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/question"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/bird"
+        android:background="#0091EA"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/choice1" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/door"
+        android:background="#0091EA"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/choice2" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rock"
+        android:background="#0091EA"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/choice3" />
 
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="184dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:layout_marginBottom="570dp"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:padding="8dp">
 
-    <LinearLayout
-        android:layout_width="333dp"
-        android:layout_height="312dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:layout_marginBottom="55dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="203dp"
+            android:layout_marginLeft="203dp"
+            android:text="@string/score"
+            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D0CDDC39"
-            android:text="@string/button" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D0CDDC39"
-            android:text="@string/button" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="37dp" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D0CDDC39"
-            android:text="@string/button" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/_0"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</LinearLayout>

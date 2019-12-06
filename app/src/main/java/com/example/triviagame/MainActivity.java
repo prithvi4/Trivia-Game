@@ -1,77 +1,85 @@
+
 package com.example.triviagame;
-
-import android.os.Bundle;
-import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Button;
-import java.util.List;
-import java.util.ArrayList;
-import android.app.Activity;
-import android.widget.TextView;
+import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import java.util.Collection;
-
-
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button buttonOne, buttonTwo, buttonThree;
-    TextView qText, text;
+
+    private TriviaQuestion mQuestionLibrary = new TriviaQuestion();
+    private TextView mScoreView;
+    private TextView mQuestionView;
+    private Button mButtonChoice1;
+    private Button mButtonChoice2;
+    private Button mButtonChoice3;
+    private String mAnswer;
+    private int mScore = 0;
+    private int mQuestionNumber = 0;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button buttonOne = findViewById(R.id.button1);
-        Button buttonTwo = findViewById(R.id.button2);
-        Button buttonThree = findViewById(R.id.button3);
-        TextView qText = findViewById(R.id.question);
-
-    }
-
-    TriviaQuestion.createList();
-
-    public void updateQ() {
-        qText.setText(TriviaQuestion.list.get(TriviaQuestion.counter).getQ());
-        buttonOne.setText(TriviaQuestion.getOne());
-        buttonTwo.setText(TriviaQuestion.getTwo());
-        buttonThree.setText(TriviaQuestion.getThree());
-    }
-
-    public void clickOne(View view) {
-        if (TriviaQuestion.list.get(TriviaQuestion.counter).getOne().equals(TriviaQuestion.list.get(TriviaQuestion.counter).getA())) {
-            buttonOne.setEnabled(false);
-            buttonTwo.setEnabled(false);
-            buttonThree.setEnabled(false);
-            TriviaQuestion.counter++;
+        mScoreView = (TextView) findViewById(R.id.score);
+        mQuestionView = (TextView) findViewById(R.id.question);
+        mButtonChoice1 = (Button) findViewById(R.id.choice1);
+        mButtonChoice2 = (Button) findViewById(R.id.choice2);
+        mButtonChoice3 = (Button) findViewById(R.id.choice3);
+        mButtonChoice1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mButtonChoice1.getText() == mAnswer) {
+                    mScore = mScore + 1;
+                    updateScore(mScore);
+                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this,"wrong", Toast.LENGTH_SHORT).show();
+                    updateQuestion();
+                }
+            }
+        });
+        mButtonChoice2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mButtonChoice2.getText() == mAnswer) {
+                    mScore = mScore + 1;
+                    updateScore(mScore);
+                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    updateQuestion();
+                }
+            }
+        });
+            mButtonChoice3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    if (mButtonChoice3.getText() == mAnswer) {
+                    mScore = mScore + 1;
+                    updateScore(mScore);
+                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    updateQuestion();
+                }
+                }
+            });
         }
-    }
-
-    public void clickTwo(View view) {
-        if (TriviaQuestion.list.get(TriviaQuestion.counter).getTwo().equals(TriviaQuestion.list.get(TriviaQuestion.counter).getA())) {
-            buttonOne.setEnabled(false);
-            buttonTwo.setEnabled(false);
-            buttonThree.setEnabled(false);
-            TriviaQuestion.counter++;
+        private void updateQuestion() {
+            mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
+            mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
+            mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
+            mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
+            mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
+            mQuestionNumber++;
         }
-    }
-
-    public void clickThree(View view) {
-        if (TriviaQuestion.list.get(TriviaQuestion.counter).getThree().equals(TriviaQuestion.list.get(TriviaQuestion.counter).getA())) {
-            buttonOne.setEnabled(false);
-            buttonTwo.setEnabled(false);
-            buttonThree.setEnabled(false);
-            TriviaQuestion.counter++;
+        private void updateScore(int point) {
+            mScoreView.setText("" + mScore);
         }
-    }
-
-    public String gameLost() {
-        return "Game Over";
-    }
-
-    public String gameWon() {
-        return "Game Won!";
-    }
-
-
-
-
 }
+
+
+

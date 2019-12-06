@@ -1,40 +1,38 @@
 package com.example.triviagame;
-import java.util.*;
-import android.app.Activity;
 
-public class TriviaQuestion extends Activity {
-    private static String question, c1, c2, c3, answer;
-    static int counter = 0;
-    public TriviaQuestion(String q, String choice1, String choice2, String choice3, String a) {
-        question = q;
-        c1 = choice1;
-        c2 = choice2;
-        c3 = choice3;
-        answer = a;
-    }
-    public String getQ() {
+public class TriviaQuestion {
+    private String mQuestions [] = {
+            "Which one of these CS courses can also satisfy the advanced comp requirement&quot",
+            "Who is the CS 125 professor&quot",
+            "Is UIUC the oldest public school in Illinois?&quot",
+            "What was the first high level programming language?" };
+
+private String mChoices [][] = {
+        {"CS 427&quot", "CS 100", "CS 225"},
+        {"Challen", "Adve", "Bailey"},
+        {"Yes", "No", "It is a private school"},
+        {"Short Code", "C++", "Autocode"}
+        };
+private String mCorrectAnswers[] = {"CS 427", "Challen", "No", "Short code"};
+public String getQuestion(int a) {
+        String question = mQuestions[a];
         return question;
-    }
-    public static String getOne() {
-        return c1;
-    }
-    public static String getTwo() {
-        return c3;
-    }
-    public static String getThree() {
-        return c3;
-    }
-    public static String getA() {
+        }
+
+public String getChoice1(int a) {
+        String choice1 = mChoices[a][0];
+        return choice1;
+        }
+public String getChoice2(int a) {
+        String choice2 = mChoices[a][1];
+        return choice2;
+        }
+public String getChoice3(int a) {
+        String choice3 = mChoices[a][2];
+        return choice3;
+        }
+public String getCorrectAnswer(int a) {
+        String answer = mCorrectAnswers[a];
         return answer;
-    }
-    static ArrayList<TriviaQuestion> list = new ArrayList<>();
-
-    public void createList() {
-        list.add(new TriviaQuestion("2 + 2", "2", "3", "4", "4"));
-        list.add(new TriviaQuestion("3 + 3", "3", "6", "4", "6"));
-        list.add(new TriviaQuestion("4 + 4", "8", "3", "7", "8"));
-        list.add(new TriviaQuestion("5 + 5", "1", "10", "9", "10"));
-        list.add(new TriviaQuestion("6 + 6", "2", "12", "10", "3"));
-    }
-
-}
+        }
+        }

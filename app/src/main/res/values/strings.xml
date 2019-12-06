@@ -3,11 +3,16 @@
     <string name="welcome_to_trivia_game">Welcome to Trivia Game!</string>
     <string name="play_game">Play Game</string>
     <string name="textview">TextView</string>
-    <string name="button">Button</string>
-    <string name="button">Button</string>
-    <string name="button">Button</string>
+
     <string name="question">Question:</string>
-    <string name="textview">TextView</string>
+
     <string name="quit">Quit</string>
     <string name="play_again">Play Again</string>
+    <string name="which_thing_is_alive">which_thing_is_alive</string>
+    <string name="bird">bird</string>
+    <string name="door">door</string>
+    <string name="rock">rock</string>
+    <string name="score">score</string>
+    <string name="_0">0</string>
 </resources>
+

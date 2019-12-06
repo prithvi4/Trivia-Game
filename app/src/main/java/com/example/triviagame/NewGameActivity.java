@@ -7,10 +7,11 @@ import android.widget.Button;
 import android.os.Bundle;
 
 public class NewGameActivity extends AppCompatActivity{
+    Button playGame;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game);
-        Button playGame = findViewById(R.id.playGame);
+        playGame = findViewById(R.id.playGame);
 
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
