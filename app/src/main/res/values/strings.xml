@@ -14,5 +14,7 @@
     <string name="rock">rock</string>
     <string name="score">score</string>
     <string name="_0">0</string>
+    <string name="would_you_like_to_play_another_game">Would you like to play another game?</string>
+    <string name="welcome_to_cs_125_trivia">Welcome to CS 125 Trivia!</string>
 </resources>
 

@@ -2,18 +2,23 @@ package com.example.triviagame;
 
 public class TriviaQuestion {
     private String mQuestions [] = {
-            "Which one of these CS courses can also satisfy the advanced comp requirement&quot",
-            "Who is the CS 125 professor&quot",
-            "Is UIUC the oldest public school in Illinois?&quot",
-            "What was the first high level programming language?" };
+            "Which one of these CS courses can also satisfy the advanced comp requirement",
+            "Who is the CS 125 professor",
+            "Is UIUC the oldest public school in Illinois?",
+            "What was the first high level programming language?",
+            "What syntax do you use when implementing a parent class?",
+            "Which sorting algorithm is the fastest?"
+    };
 
 private String mChoices [][] = {
-        {"CS 427&quot", "CS 100", "CS 225"},
+        {"CS 427", "CS 100", "CS 225"},
         {"Challen", "Adve", "Bailey"},
         {"Yes", "No", "It is a private school"},
-        {"Short Code", "C++", "Autocode"}
+        {"Short Code", "C++", "Autocode"},
+        {"Implements", "Connects", "Extends"},
+        {"Insertion Sort", "Quick Sort", "Bubble Sort"}
         };
-private String mCorrectAnswers[] = {"CS 427", "Challen", "No", "Short code"};
+private String mCorrectAnswers[] = {"CS 427", "Challen", "No", "Short Code", "Extends", "Quick Sort"};
 public String getQuestion(int a) {
         String question = mQuestions[a];
         return question;

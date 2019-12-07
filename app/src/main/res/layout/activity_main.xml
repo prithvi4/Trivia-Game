@@ -4,44 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="#AB1F1D1D"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="@string/which_thing_is_alive"
-        android:textSize="20sp"
-        android:padding="8dp"
         android:layout_marginBottom="40dp"
-        android:id="@+id/question"  />
+        android:padding="8dp"
+        android:textSize="20sp" />
+
     <Button
+        android:id="@+id/choice1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bird"
-        android:background="#0091EA"
-        android:textColor="#fff"
-        android:padding="8dp"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice1" />
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:textColor="#fff" />
+
     <Button
+        android:id="@+id/choice2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/door"
-        android:background="#0091EA"
-        android:textColor="#fff"
-        android:padding="8dp"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice2" />
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:textColor="#fff" />
+
     <Button
+        android:id="@+id/choice3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/rock"
-        android:background="#0091EA"
-        android:textColor="#fff"
-        android:padding="8dp"
         android:layout_marginBottom="24dp"
-        android:id="@+id/choice3" />
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:textColor="#fff" />
 
     <RelativeLayout
         android:layout_width="match_parent"

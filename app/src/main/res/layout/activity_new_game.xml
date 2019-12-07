@@ -16,7 +16,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="@string/welcome_to_trivia_game"
+        android:text="@string/welcome_to_cs_125_trivia"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/playGame"
         app:layout_constraintEnd_toEndOf="parent"

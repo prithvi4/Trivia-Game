@@ -8,7 +8,7 @@
     android:background="#970C0B0B">
 
     <TextView
-        android:id="@+id/playAgain"
+        android:id="@+id/again"
         android:layout_width="266dp"
         android:layout_height="86dp"
         android:layout_marginStart="124dp"
@@ -16,49 +16,48 @@
         android:layout_marginTop="132dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
-        android:layout_marginBottom="580dp"
-        android:text="@string/textview"
+        android:layout_marginBottom="500dp"
+        android:text="@string/would_you_like_to_play_another_game"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328"
-        tools:text="Would you like to  play another game?" />
+        app:layout_constraintVertical_bias="0.328" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="278dp"
+        android:background="#E91E63"
+        android:text="@string/play_again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/again" />
 
     <Button
         android:id="@+id/quitGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="270dp"
-        android:layout_marginLeft="270dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="285dp"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="377dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="83dp"
         android:background="#E91E63"
         android:text="@string/quit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/again" />
 
-    <Button
-        android:id="@+id/playAgain"
-        android:layout_width="112dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginRight="147dp"
-        android:background="#E91E63"
-        android:text="@string/play_again"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
