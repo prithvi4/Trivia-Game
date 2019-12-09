@@ -18,6 +18,7 @@ public class ActivityAgain extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(ActivityAgain.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
                 finish();
             }
         });

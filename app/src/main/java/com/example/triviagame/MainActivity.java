@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private TriviaQuestion mQuestionLibrary = new TriviaQuestion();
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonChoice2 = (Button) findViewById(R.id.choice2);
         mButtonChoice3 = (Button) findViewById(R.id.choice3);
         updateQuestion();
+        overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
 
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
                     updateScore(mScore);
                     Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     updateQuestion();
+                    overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
 
 
                 } else {
                     Toast.makeText(MainActivity.this,"wrong", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, ActivityAgain.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
                     finish();
                 }
             }
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, ActivityAgain.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
                     finish();
                 }
             }
@@ -79,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, ActivityAgain.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.fade_out,R.anim.fade_in);
                     finish();
                 }
             }
